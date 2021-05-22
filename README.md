@@ -1,5 +1,5 @@
 
-#Validor si un número es par o impar.
+#Validador si un número es par o impar.
 
 Number=int(input("ingrese un número: "))
 if Number % 2  == 0:
