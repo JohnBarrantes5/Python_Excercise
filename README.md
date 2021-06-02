@@ -12,15 +12,15 @@ bonificacion = int (bonificacion)
 
 valor_hora  = salario_base/171
 
-Valor_tot_hora = (valor_hora*0.017)*horas_extras
+Valor_tot_hora = (valor_hora*0.17 + valor_hora)*horas_extras 
 bonificacion = (salario_base* bonificacion* 0.088) 
 
 salario_total = salario_base + Valor_tot_hora + bonificacion
 
 plan_obligatorio_salud = salario_total*0.05
 caja_compesacion = salario_total*0.01
-aporte_pension = salario_base*0.05 
+aporte_pension = salario_total*0.05 
 
-salario_final = ((salario_total)-(plan_obligatorio_salud + aporte_pension + caja_compesacion))
+salario_final = salario_total - plan_obligatorio_salud - aporte_pension - caja_compesacion
 
 print(round(salario_total,1), round(salario_final,1))
